@@ -16,8 +16,10 @@ import java.io.IOException;
 @Configuration
 public class JwtFilter extends GenericFilterBean {
 
+    @Autowired
     private TokenConsumer tokenConsumerService;
 
+    @Autowired
     public JwtFilter(TokenConsumer tokenConsumerService){
         this.tokenConsumerService = tokenConsumerService;
     }

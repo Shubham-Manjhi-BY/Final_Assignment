@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @FeignClient("token-service/auth")
 public interface TokenConsumer {
 
+
+
     @GetMapping("/get-token/{id}")
     String createToken(@PathVariable("id") ObjectId id);
 
