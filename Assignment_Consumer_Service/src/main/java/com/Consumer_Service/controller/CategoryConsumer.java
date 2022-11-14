@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-@RequestMapping("/consumer")
+
 @FeignClient("shopManagement-service/category")
 public interface CategoryConsumer {
 

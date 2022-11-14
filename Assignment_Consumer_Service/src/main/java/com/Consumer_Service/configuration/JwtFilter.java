@@ -4,7 +4,6 @@ import com.Consumer_Service.controller.TokenConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.GenericFilterBean;
-
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -16,11 +15,10 @@ import java.io.IOException;
 @Configuration
 public class JwtFilter extends GenericFilterBean {
 
-    @Autowired
     private TokenConsumer tokenConsumerService;
 
-    @Autowired
-    public JwtFilter(TokenConsumer tokenConsumerService){
+    public JwtFilter(TokenConsumer tokenConsumerService
+    ){
         this.tokenConsumerService = tokenConsumerService;
     }
 

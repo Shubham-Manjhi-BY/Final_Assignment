@@ -2,14 +2,16 @@ package com.Consumer_Service.controller;
 
 import com.Consumer_Service.model.User;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
-@RestController
-@RequestMapping("/admin-service/user")
+
+
 @FeignClient("admin-service/user")
 public interface AdminConsumer {
 
